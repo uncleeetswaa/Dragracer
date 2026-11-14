@@ -1,0 +1,9 @@
+{
+ "name": "Retro Drag Racer",
+ "short_name": "Drag Racer",
+ "start_url": "index.html",
+ "display": "standalone",
+ "orientation": "landscape",
+ "background_color": "#0b0b14",
+ "theme_color": "#0b0b14"
+}
