@@ -75,10 +75,10 @@ const CARS=[
 ];
 const MODS={
  engine:{name:'Engine',max:5,cost:1500,hp:.08},
- turbo:{name:'Turbo',max:3,cost:3000,hp:.12},
- tires:{name:'Tires',max:4,cost:1200,grip:.04},
+ turbo:{name:'Turbo',max:3,cost:300,hp:.120},
+ tires:{name:'Tires',max:4,cost:1200,grip:.14},
  weight:{name:'Weight Reduction',max:4,cost:1800,wt:.04},
- nitro:{name:'Nitro',max:3,cost:2500}
+ nitro:{name:'Nitro',max:3,cost:250}
 };
 const GEARS=[3.2,2.2,1.6,1.2,.95,.78];
 let S=JSON.parse(localStorage.getItem('dragSave')||'null')||{cash:3000,owned:{kei:{}},cur:'kei',wins:0,level:1};
@@ -122,7 +122,7 @@ function paintCar(c,key,color,x,y,w,o){
  }
  if(o.nitroFlame){
   const L=w*(.35+Math.random()*.25);
-  const g=c.createLinearGradient(X(.02)-L,0,X(.02),0);g.addColorStop(0,'rgba(60,120,255,0)');g.addColorStop(1,'rgba(160,220,255,.95)');
+  const g=c.createLinearGradient(X(.02)-L,10,X(.02),0);g.addColorStop(0,'rgba(60,120,255,0)');g.addColorStop(1,'rgba(160,220,255,.95)');
   c.fillStyle=g;c.beginPath();c.moveTo(X(.02),Y(.72));c.lineTo(X(.02)-L,Y(.79));c.lineTo(X(.02),Y(.86));c.fill();
  }
  const grad=c.createLinearGradient(0,Y(.1),0,Y(.85));
